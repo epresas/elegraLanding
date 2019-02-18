@@ -1,0 +1,22 @@
+.hero-wraper{
+    background: $ele-black;
+}
+.carousel-item{
+    background-color: cadetblue;
+}
+
+.elegra-logo{
+    position: relative;
+    border: 8px solid $ele-blue-primary;
+    width:30px;
+    height: 20px;
+    &::before{
+        content: "";
+        width:46px;
+        height: 20px;
+        border-bottom: 8px solid $ele-blue-primary;
+        position: absolute;
+        top: 15px;
+        left: -8px;
+      }
+  }
