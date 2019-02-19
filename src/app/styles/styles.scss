@@ -7,3 +7,21 @@
 body{
     font-family: 'Open Sans', sans-serif;
 }
+
+/* Headings */
+
+@for $i from 1 through 6 {
+    h#{$i} {
+        font-size: $base-font-size + $heading-scale * (6 - $i);
+    }
+}
+
+.section-title{
+    letter-spacing: .25em;
+    &.section-title--dark{
+        color: $ele-gray-primary;
+    }
+    &.section-title--light{
+        color: $ele-white;
+    }
+}

@@ -1,3 +1,10 @@
-<p>
-  clients works!
-</p>
+<section class="container-fluid clients-wrapper">
+  <h2 class="h2 section-title section-title-dark text-uppercase">Clientes</h2>
+  <div class="clients-content">
+    <ul class="clients-content-list no-padding-x">
+      <li class="clients-content-list__item" *ngFor="let client of clientsList">
+          <img [src]="client.imgPath" alt="client.name" class="clients-content-list__item-avatar">
+      </li>
+    </ul>
+  </div>
+</section>
