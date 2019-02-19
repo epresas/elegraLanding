@@ -1,8 +1,52 @@
 @import "../../styles/partials/variables";
 
+.clients-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @media all and (min-width: $screen-min-sm){
+        height: 90vh;
+    } 
+}
+
+.clients-title{
+    margin-bottom: 5em;
+   
+}
+
 .clients-content-list{
     list-style: none;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* @media all and (min-width: $screen-min-sm){
+        height: 100vh;
+    } */
+
+}
+
+.clients-content-list__item{
+    height: 100%;
+    flex: 0 0 100%;
+    max-width: 290px;
+    padding: 15px 25px;
+    margin-bottom: 2em;
+    @media all and (min-width: $screen-min-s){
+        flex: 0 0 50%;
+    }
+    @media all and (min-width: $screen-min-sm){
+        flex: 0 0 33.33%;
+    }
+    @media all and (min-width: $screen-min-md){
+        flex: 0 0 16.5%;
+    }
+
+}
+
+.clients-content-list__item-avatar{
+    width: 100%;
+    height: 100%;
 }
