@@ -1,5 +1,22 @@
 <div class="hero-wraper">
   <div class="container-fluid no-padding hero-wrapper__veil">
+    <div class="menu-wrapper">
+      <div class="menu" [ngClass]="{'menu--open': menuOpen, 'menu--closed': !menuOpen}">
+        <button class="menu__btn toggle-btn" (click)="onToggleMenu()">
+          <div class="toggle-btn__bar toggle-btn__bar-top"></div>
+          <div class="toggle-btn__bar toggle-btn__bar-middle"></div>
+          <div class="toggle-btn__bar toggle-btn__bar-bottom"></div>
+        </button>
+        <nav class="menu__nav">
+          <ul class="menu__nav-list no-padding-x">
+            <li class="menu__nav-list-item mb-4"><a href="#" class="text-uppercase menu__nav-list-item-link">Inicio</a></li>
+            <li class="menu__nav-list-item mb-4"><a href="#" class="text-uppercase menu__nav-list-item-link">Servicios</a></li>
+            <li class="menu__nav-list-item mb-4"><a href="#" class="text-uppercase menu__nav-list-item-link">Metodología</a></li>
+            <li class="menu__nav-list-item mb-4"><a href="#" class="text-uppercase menu__nav-list-item-link">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
     <div class="row no-margin-x">
       <div class="col-12 no-padding-x">
         <div id="heroCarousel" class="carousel" data-ride="false" data-interval="false" >
@@ -36,5 +53,4 @@
       </div>
     </div>
   </div>
-
 </div> 

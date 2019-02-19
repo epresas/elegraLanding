@@ -14,3 +14,13 @@ $heading-scale: 8;
     font-size: $base-font-size + $heading-scale * (6 - $i);
   }
 }
+
+/* BREAKPOINTS */
+
+$screen-min-xs:  320px;
+$screen-min-sm:  768px;
+$screen-min-md:  991px;
+$screen-min-lg: 1200px;
+$screen-max-xs:  767px;
+$screen-max-sm:  990px;
+$screen-max-md: 1199px;
