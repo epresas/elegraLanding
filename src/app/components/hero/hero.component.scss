@@ -32,6 +32,9 @@ $hero-img-path: "src/assets/images/hero_image.jpg";
         background-color: $ele-white;
     }
 }
+.carousel-control-next, .carousel-control-prev {
+    width: 10%;
+}
 
 .elegra-logo{
     position: relative;
@@ -71,8 +74,8 @@ $hero-img-path: "src/assets/images/hero_image.jpg";
 .slide__text{
     width: 100%;
     line-height: 24px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
     @media all and (min-width:480px){
         width: 90%;
     }

@@ -35,7 +35,7 @@ export class HeroComponent implements OnInit {
 
 
   @ViewChild('heroCarousel') private heroCarousel: ElementRef;
-  // tslint:disable-next-line:no-unused-expression
+  // // tslint:disable-next-line:no-unused-expression
   // public swipe(): void {
   //   const carousel = this.heroCarousel.nativeElement;
   //   const $carousel = $(carousel);
