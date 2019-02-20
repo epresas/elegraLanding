@@ -5,13 +5,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    @media all and (min-width: $screen-min-sm){
-        height: 90vh;
+    @media all and (min-width: $screen-min-md){
+        height: 92vh;
     } 
 }
 
 .clients-title{
-    margin-bottom: 5em;
+    margin-bottom: 2em;
    
 }
 

@@ -10,7 +10,7 @@
     height: 0; 
     &.menu--closed{
         height: 0vh;
-        transition: height 10s linear;
+        transition: height 3s linear;
     }
     &.menu--open{
         height: 100vh;
@@ -67,7 +67,7 @@
 .menu__btn {
    
     background-color: transparent;
-    border: 1px solid $ele-white;
+    border: 1px solid $ele-blue-primary;
     cursor: pointer;
     height: 30px;
     width: 40px;
@@ -77,9 +77,9 @@
     outline: 0;
     padding: 2px;
     &:focus{
-        border-color: $ele-blue-primary;
+        border-color: lighten($ele-blue-primary,30%);
         .toggle-btn__bar{
-            background-color: $ele-blue-primary;
+            background-color: lighten($ele-blue-primary,30%);
         }
     }
     @media all and(min-width: 768px){
@@ -90,7 +90,7 @@
   .toggle-btn__bar {
     width: 33px;
     height: 4px;
-    background: $ele-white;
+    background: $ele-blue-primary;
     margin: 3px 1px;
     transition: all 0.3s;
     backface-visibility: hidden;

@@ -31,7 +31,8 @@ export class ClientsComponent implements OnInit {
     {
       name: 'I.E. Business school',
       imgPath: './assets/images/logo_ie-business.png'
-    },{
+    },
+    {
       name: 'Ferrovial',
       imgPath: './assets/images/logo_ferrovial.png'
     },

@@ -1,9 +1,9 @@
-<section class="container clients-wrapper">
-  <h2 class="h2 section-title section-title-dark text-uppercase text-center clients-title mt-5">{{sectionTitle}}</h2>
+<section class="container clients-wrapper" id="clients">
+  <h2 class="h2 section-title section-title--dark text-uppercase text-center clients-title mt-5">{{sectionTitle}}</h2>
   <div class="clients-content">
-    <ul class="clients-content-list no-padding-x">
+    <ul class="clients-content-list no-padding-x" role="presentation">
       <li class="clients-content-list__item" *ngFor="let client of clientsList">
-          <img [src]="client.imgPath" alt="client.name" class="clients-content-list__item-avatar">
+          <img [src]="client.imgPath"  alt="client.name" class="clients-content-list__item-avatar">
       </li>
     </ul>
   </div>

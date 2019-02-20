@@ -1,0 +1,70 @@
+@import "../../styles/partials/variables";
+
+.intro-wrapper{
+    @media all and (min-width: $screen-min-md){
+        height: 100vh;
+        display: flex;
+    }
+}
+.intro-block{
+    display: block;
+    @media all and (min-width: $screen-min-md){
+        display: flex;
+        margin: 80px 50px;
+        flex-flow: row wrap;
+        align-items: center;
+    }
+    
+}
+.intro-block__column{
+    margin: 20px 0;
+    align-self: flex-end;
+    @media all and (min-width: $screen-min-s){
+        flex: 1;
+        margin: 10px 20px;
+        &:last-child{
+            flex-basis: 100%;
+            align-self: flex-start;
+        }
+    }
+}
+.intro-block__column-text{
+    color: $ele-gray-primary;
+    font-size: 1em;
+    line-height: 24px;
+    @media all and (min-width: $screen-min-sm){
+        font-size: 1.125em;
+        line-height: 32px;
+    }
+}
+
+.quote{
+    color: $ele-gray-primary;
+    @media all and (min-width: $screen-min-sm){
+        flex-basis: 25%;
+        .quote__content{
+            font-size: 2.5em;
+            line-height: 53px;
+        }
+        .quote__author{
+            font-size: 1.25em;
+            line-height: 27px;
+        }
+    }
+    // @media all and (min-width: $screen-min-sm){
+    //     .quote__content{
+    //         font-size: 2.5em;
+    //     }
+    // }
+}
+
+.quote__content{
+    font-size: 1.5em;
+    @media all and (min-width: $screen-min-sm){
+        font-size: 2.5em;
+    }
+}
+
+.quote__author{
+    font-size: 1.125em;
+}
