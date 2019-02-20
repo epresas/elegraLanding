@@ -3,21 +3,21 @@
     
     <div class="row no-margin-x">
       <div class="col-12 no-padding-x">
-        <div id="heroCarousel" class="carousel" data-ride="false" data-interval="false" >
-          <ol class="carousel-indicators">
-            <li data-target="#heroCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#heroCarousel" data-slide-to="1"></li>
-            <li data-target="#heroCarousel" data-slide-to="2"></li>
+        <div id="heroCarousel" class="carousel" data-ride="carousel" data-interval="4000" data-keyboard="true" #heroCarousel (swipeleft)="swipe()" (swiperight)="swipe()">
+          <ol class="carousel-indicators" *ngIf="heroSlides.length > 1">
+            <li data-target="#heroCarousel"  [attr.data-slide-to]="index" *ngFor="let slide of heroSlides; let index = index" [ngClass]="{'active':index===activeIndex}"></li>
+            <!-- <li data-target="#heroCarousel" data-slide-to="1"></li>
+            <li data-target="#heroCarousel" data-slide-to="2"></li> -->
           </ol>
           <div class="carousel-inner">
-            <div class="carousel-item slide   active">
+            <div class="carousel-item slide " [ngClass]="{'active': index === 0}" [attr.data-slide-number]="index" *ngFor="let slide of heroSlides; let index=index;">
               <div class="d-flex flex-column align-items-center slide__content">
                 <div class="elegra-logo mb-5"></div>
                 <h2 class="slide__title mb-4 text-white text-uppercase text-center">Diseñamos para pensar</h2>
                 <p class="slide__text text-center text-white mb-5">En Elegra nos centramos en ofrecer nuestros servicios a las empresas que valoran el buen trabajo que hay detrás de un proyecto tecnológico. Dedicándonos al trabajo que nos apasiona conseguimos los mejores resultados.</p>
               </div>
             </div>
-            <div class="carousel-item slide ">
+            <!-- <div class="carousel-item slide ">
               <div class="d-flex flex-column align-items-center slide__content">
                 <div class="elegra-logo mb-5"></div>
                 <h2 class="slide__title mb-4 text-white text-uppercase text-center">Diseñamos para pensar</h2>
@@ -30,7 +30,7 @@
                 <h2 class="slide__title mb-4 text-white text-uppercase text-center">Diseñamos para pensar</h2>
                 <p class="slide__text text-center text-white mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro delectus non dignissimos voluptate voluptas tempora reprehenderit voluptatum, quidem quos ducimus laudantium in, iste velit eveniet minima voluptatibus temporibus, veniam officia.</p>
               </div>
-            </div>
+            </div> -->
           </div>
           
         </div>
@@ -38,3 +38,19 @@
     </div>
   </div>
 </div> 
+<!-- 
+<div id="myCarousel" #myCarousel (swipeleft)="swipe()" (swiperight)="swipe()" class="carousel slide">
+  
+  <div class="carousel-inner">
+      <div class="item carousel-item text-center" [attr.data-slide-number]="index" *ngFor="let image of product.attribute; let index=index;" [ngClass]="{'active': index === 0}">
+          <img [src]="imageURL + image.imageName" class="img-fluid" alt="{{product.name}}" title="{{product.name}}" />
+      </div>
+  </div>
+  <ul class="carousel-indicators mt-2" *ngIf="product.attribute.length > 1">
+          <li data-target="#myCarousel" [attr.data-slide-to]="index" *ngFor="let image of product.attribute; let index = index" [ngClass]="{'active':index===activeIndex}" (click)="scrollToBundle(index)">
+              <a id="carousel-selector-0" class="selected">
+                  <img [src]="imageURL + image.imageName" class="img-fluid" alt="{{product.name}}" title="{{product.name}}" />
+              </a>
+          </li>
+      </ul>
+</div> -->
