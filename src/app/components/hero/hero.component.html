@@ -3,14 +3,14 @@
     
     <div class="row no-margin-x">
       <div class="col-12 no-padding-x">
-        <div id="heroCarousel" class="carousel" data-ride="carousel" data-interval="4000" data-keyboard="true" #heroCarousel (swipeleft)="swipe()" (swiperight)="swipe()">
+        <div id="heroCarousel" class="carousel" data-ride="carousel" data-interval="4000" data-keyboard="true" >
           <ol class="carousel-indicators">
             <li data-target="#heroCarousel"  data-slide-to="0" class="active"></li>
             <li data-target="#heroCarousel" data-slide-to="1"></li>
             <li data-target="#heroCarousel" data-slide-to="2"></li>
           </ol>
           <div class="carousel-inner">
-            <div class="carousel-item slide active"  [attr.data-slide-number]="index" *ngFor="let slide of heroSlides; let index=index;">
+            <div class="carousel-item slide active" >
               <div class="d-flex flex-column align-items-center slide__content">
                 <div class="elegra-logo mb-5"></div>
                 <h2 class="slide__title mb-4 text-white text-uppercase text-center">Diseñamos para pensar</h2>

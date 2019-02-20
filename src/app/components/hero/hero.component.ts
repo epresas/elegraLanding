@@ -35,22 +35,22 @@ export class HeroComponent implements OnInit {
 
 
   @ViewChild('heroCarousel') private heroCarousel: ElementRef;
-  // tslint:disable-next-line:no-unused-expression
-  public swipe(): void {
-    const carousel = this.heroCarousel.nativeElement;
-    const $carousel = $(carousel);
-    const hammertime = new Hammer(carousel, {
-        recognizers: [
-            [Hammer.Swipe, { direction: Hammer.DIRECTION_HORIZONTAL }]
-        ]
-    });
-    hammertime.on('swipeleft', function () {
-      $carousel.carousel('prev');
-    });
-    hammertime.on('swiperight', function () {
-      $carousel.carousel('next');
-    });
-  }
+  // // tslint:disable-next-line:no-unused-expression
+  // public swipe(): void {
+  //   const carousel = this.heroCarousel.nativeElement;
+  //   const $carousel = $(carousel);
+  //   const hammertime = new Hammer(carousel, {
+  //       recognizers: [
+  //           [Hammer.Swipe, { direction: Hammer.DIRECTION_HORIZONTAL }]
+  //       ]
+  //   });
+  //   hammertime.on('swipeleft', function () {
+  //     $carousel.carousel('prev');
+  //   });
+  //   hammertime.on('swiperight', function () {
+  //     $carousel.carousel('next');
+  //   });
+  // }
 
 
   ngOnInit(
